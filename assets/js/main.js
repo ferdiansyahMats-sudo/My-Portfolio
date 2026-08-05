@@ -81,7 +81,7 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: 400,
       easing: 'ease-in-out',
       once: true,
       mirror: false
@@ -105,11 +105,7 @@
     });
   }
 
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
+  
   /**
    * Animate the skills items on reveal
    */
@@ -205,15 +201,20 @@
   });
 
   /**
-   * Navmenu Scrollspy
+  /**
+   * Navmenu Scrollspy (Perbaikan untuk Multi-halaman)
    */
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
     navmenulinks.forEach(navmenulink => {
       if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
+      
+      // Mengambil ID saja dari tautan (misal 'index.html#about' menjadi '#about')
+      let targetId = navmenulink.hash;
+      let section = document.querySelector(targetId);
       if (!section) return;
+      
       let position = window.scrollY + 200;
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
@@ -225,5 +226,6 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
 
 })();

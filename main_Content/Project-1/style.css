@@ -1,0 +1,140 @@
+
+/* ---------------- ROOT COLORS ---------------- */
+:root {
+    --bg: #EFEEEA;
+    --card: #ffffff;
+    --text: #333;
+    --accent-primary:#32cc8c;
+    --accent-secondary: #146542;
+    --accent-button: #32cc8c;
+}
+
+body.dark {
+    --bg: #1a202c;
+    --card: #2d3748;
+    --text: #e2e8f0;
+    --accent-primary: #000;
+    --accent-secondary: #fbc02d;
+}
+
+/* ---------------- GLOBAL ---------------- */
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    transition: 0.3s;
+}
+
+/* ---------------- HEADER ---------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--accent-primary);
+    color: white;
+}
+
+.toggle-dark, .btn-playlist {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ---------------- PRODUCT GRID ---------------- */
+.main-content {
+    padding: 25px;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.product-details h3 {
+    color: var(--accent-primary);
+}
+
+.btn-play {
+    background: var(--accent-button);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-play:hover {
+    background: #004d40;
+}
+
+/* ---------------- MODAL ---------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Playlist */
+#playlistModal ul {
+    max-height: 250px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+}
+#playlistModal li {
+    padding: 10px;
+    background: var(--bg);
+    margin-bottom: 8px;
+    border-radius: 7px;
+}

@@ -1,8 +1,4 @@
 
-// DARK MODE
-function toggleDarkMode() {
-    document.body.classList.toggle("dark");
-}
 
 // PLAYLIST
 const playlist = [];
@@ -35,7 +31,7 @@ function openPopup(btn) {
     document.getElementById("modalArtist").textContent = card.dataset.artist;
 
     // Video selalu animasi.mp4
-    modalVideoSrc.src = "animasi.mp4";
+    modalVideoSrc.src = card.dataset.video;
     modalVideo.load();
     modalVideo.currentTime = 0;
     modalVideo.muted = true;

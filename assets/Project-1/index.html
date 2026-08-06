@@ -14,7 +14,6 @@
     <h1>My Music XD 🎧</h1>
 
     <div>
-        <button class="toggle-dark" onclick="toggleDarkMode()">Dark Mode</button>
         <button class="btn-playlist" onclick="openPlaylist()">Playlist</button>
     </div>
 </header>
@@ -27,9 +26,11 @@
         <div class="product-card"
             data-album="Lovers Rock"
             data-artist="TV Girl"
-            data-song="song1">
+            data-song="song1"
+                        data-video="/assets/Project-1/asset/animasi.mp4">
+
             
-            <img src="tvgirl.jpeg">
+            <img src="/assets/Project-1/asset/tvgirl.jpeg">
             <div class="product-details">
                 <h3>Lovers Rock</h3>
                 <p>TV Girl</p>
@@ -37,43 +38,46 @@
                 <button class="btn-play" onclick="openPopup(this)">Play</button><br>
                 <button onclick="addToPlaylist('Lovers Rock - TV Girl')">Add to Playlist</button>
 
-                <audio id="song1" src="Lovers Rock.mp3"></audio>
+                <audio id="song1" src="/assets/Project-1/asset/Lovers Rock.mp3"></audio>
             </div>
         </div>
 
         <!-- CARD 2 -->
         <div class="product-card"
-            data-album="I Can't Handle Change"
-            data-artist="Roar"
-            data-song="song2">
+            data-album="Anything You Want"
+            data-artist="Reality Club"
+            data-song="song2"
+            data-video="/assets/Project-1/asset/RealityClub.mp4">
 
-            <img src="roar.jpeg">
+
+            <img src="/assets/Project-1/asset/RealityClub.png">
             <div class="product-details">
-                <h3>I Can't Handle Change</h3>
-                <p>Roar</p>
+                <h3>Anything You Want</h3>
+                <p>Reality Club</p>
 
                 <button class="btn-play" onclick="openPopup(this)">Play</button><br>
-                <button onclick="addToPlaylist('I Can’t Handle Change - Roar')">Add to Playlist</button>
+                <button onclick="addToPlaylist('Anything You Want - Reality Club')">Add to Playlist</button>
 
-                <audio id="song2" src="Roar - I Can’t Handle Change.mp3"></audio>
+                <audio id="song2" src="/assets/Project-1/asset/RealityClub.mp4"></audio>
             </div>
         </div>
 
         <!-- CARD 3 -->
         <div class="product-card"
-            data-album="Chamber Of Reflection"
-            data-artist="Mac DeMarco"
-            data-song="song3">
+            data-album="Please, Please, Please Let Me Get What I Want"
+            data-artist="The Smith"
+            data-song="song3"
+            data-video="/assets/Project-1/asset/TheSmiths.mp4">
 
-            <img src="mac.jpeg">
+            <img src="/assets/Project-1/asset/TheSmith.png">
             <div class="product-details">
-                <h3>Chamber Of Reflection</h3>
-                <p>Mac DeMarco</p>
+                <h3>Please, Please, Please Let Me Get What I Want</h3>
+                <p>The Smith</p>
 
                 <button class="btn-play" onclick="openPopup(this)">Play</button><br>
-                <button onclick="addToPlaylist('Chamber Of Reflection - Mac DeMarco')">Add to Playlist</button>
+                <button onclick="addToPlaylist('Please, Please, Please Let Me Get What I Want - The Smith')">Add to Playlist</button>
 
-                <audio id="song3" src="Chamber Of Reflection.mp3"></audio>
+                <audio id="song3" src="/assets/Project-1/asset/TheSmiths.m4a"></audio>
             </div>
         </div>
 
@@ -87,7 +91,7 @@
 
         <!-- FIX: Video selalu animasi.mp4 -->
         <video id="modalVideo" controls style="width:100%; max-height:350px; border-radius:10px;">
-            <source id="modalVideoSrc" src="animasi.mp4" type="video/mp4">
+            <source id="modalVideoSrc" src="/assets/Project-1/asset/RealityClub.mp4" type="video/mp4">
         </video>
 
         <h3 id="modalAlbum"></h3>

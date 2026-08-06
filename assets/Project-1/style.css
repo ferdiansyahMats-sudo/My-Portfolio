@@ -1,12 +1,12 @@
 
 /* ---------------- ROOT COLORS ---------------- */
 :root {
-    --bg: #EFEEEA;
-    --card: #ffffff;
-    --text: #333;
-    --accent-primary:#32cc8c;
-    --accent-secondary: #146542;
-    --accent-button: #32cc8c;
+   --bg: #1a202c;
+    --card: #2d3748;
+    --text: #e2e8f0;
+    --accent-primary: #000;
+    --accent-secondary: #fbc02d;
+    --accent-button: #13714a;
 }
 
 body.dark {
